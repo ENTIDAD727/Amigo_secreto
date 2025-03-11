@@ -10,8 +10,7 @@ Este es un proyecto web para organizar un sorteo de amigo secreto de manera senc
 
 ## Capturas de Pantalla
 
-![Vista previa](amigo-secreto.png)
-
+!![Captura](capture/captura.png)
 ## Características
 
 - Permite agregar nombres de participantes.
