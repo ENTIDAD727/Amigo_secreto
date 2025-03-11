@@ -1,3 +1,4 @@
+// Modificaciones en app.js
 let amigos = [];
 
 // Función para agregar nombres a la lista
@@ -22,7 +23,7 @@ function agregarAmigo() {
     input.value = "";
 }
 
-// Función para sortear un amigo secreto
+// Función para sortear un amigo secreto y desvanecerlo
 function sortearAmigo() {
     if (amigos.length < 2) {
         alert("Debes ingresar al menos dos nombres para sortear.");
@@ -32,7 +33,12 @@ function sortearAmigo() {
     const indiceAleatorio = Math.floor(Math.random() * amigos.length);
     const amigoSecreto = amigos[indiceAleatorio];
 
-    // Mostrar el resultado en la página
+    // Mostrar el resultado
     const resultado = document.getElementById("resultado");
-    resultado.innerHTML = `<li>🎉 Tu amigo secreto es: <strong>${amigoSecreto}</strong> 🎁</li>`;
+    resultado.innerHTML = `<li class='fade-out'>🎉 Tu amigo secreto es: <strong>${amigoSecreto}</strong> 🎁</li>`;
+
+    // Hacer que el mensaje se desvanezca después de 3 segundos
+    setTimeout(() => {
+        resultado.innerHTML = "";
+    }, 3000);
 }
